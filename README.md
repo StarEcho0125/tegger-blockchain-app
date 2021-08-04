@@ -19,6 +19,8 @@ cd backend
 npm install
 npm start (yarn start)
 
+Finally, to set the api url, please edit the config.js file of frontend/src directory.
+
 ##################################################################################################################
 You can see the live link on http://37.122.209.216:3000/
 

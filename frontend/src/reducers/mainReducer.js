@@ -1,27 +1,27 @@
 import {
-    GET_TOKEN,
-    GET_ADDRESS,
-} from '../actions/auth';
+    SET_ASSET_DATA,
+    SET_HISTORY_DATA,
+} from '../actions';
 
 const defaultState = {
-    token: '',
-    address: '',
+    assetData: [],
+    historyData: [],
 }
 
 export default (state = defaultState, action) => {
     switch (action.type) {
-        case GET_TOKEN:
+        case SET_ASSET_DATA: {
             return {
                 ...state,
-                token: action.payload,
+                assetData: action.payload,
             }
-
-        case GET_ADDRESS: 
+        }
+        case SET_HISTORY_DATA: {
             return {
                 ...state,
-                address: action.payload,
+                historyData: action.payload,
             }
-    
+        }
         default:
             return state
     }
